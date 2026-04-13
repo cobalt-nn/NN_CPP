@@ -20,6 +20,7 @@ private:
       addAct(activations::Sigmoid);
       addAct(activations::ReLU);
       addAct(activations::LeakyReLU);
+      addAct(activations::Straight_Through_Estimator);
       return true;
     }();
   }

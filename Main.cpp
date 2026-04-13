@@ -34,7 +34,7 @@ int main(){
   cobalt_715::nn::Trainer t = cobalt_715::nn::Trainer("nn/models/model.json");//モデルの場所を指定している
 
   std::vector<int> model_size = {2,4,1};//モデルのサイズを指定する
-  std::vector<cobalt_715::nn::Activation> acts = {cobalt_715::nn::Acts::getAct("LeakyReLU"),cobalt_715::nn::Acts::getAct("LeakyReLU")};//各層の活性化関数を指定する
+  std::vector<cobalt_715::nn::Activation> acts = {cobalt_715::nn::Acts::getAct("Straight_Through_Estimator"),cobalt_715::nn::Acts::getAct("Straight_Through_Estimator")};//各層の活性化関数を指定する
 
   t.load_model();//Trainer生成時に指定したtxtファイルからモデル読み込み
   t.make_dense_model(model_size,acts);//モデルを生成

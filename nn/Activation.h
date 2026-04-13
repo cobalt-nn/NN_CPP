@@ -47,6 +47,16 @@ inline const Activation LeakyReLU{
   }
 };
 
+inline const Activation Straight_Through_Estimator{
+  "Straight_Through_Estimator",
+  [](double x){
+    return (0.0 < x) ? 1.0:0.0;
+  },
+  [](double z,double a){
+    return 1.0;
+  }
+};
+
 }//namespace activations
 
 }//namespace cobalt_715::nn
