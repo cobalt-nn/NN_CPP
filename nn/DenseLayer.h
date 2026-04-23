@@ -6,7 +6,7 @@
 #include <string>
 #include <random>
 #include "nlohmann/json.hpp"
-#include "Ilayer.h"
+#include "ILayer.h"
 #include "Matrix.h"
 #include "Activation.h"
 #include "Acts.h"
